@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обмен</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Fonts -->
+
+</head>
+
+<body>
+
+    <!-- header
+    ======================================================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="menu__list-wrapper">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="index.html" class="link">Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="trade.html" class="link active">Обмен</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="about.html" class="link">О нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="faq.html" class="link">FAQ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="contacts.html" class="link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ui languages dropdown">
+                    <div class="text">
+                        <img class="ui languages__flag image" src="./img/russia.svg">
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item selected active">
+                            <img class="ui languages__flag image" src="./img/russia.svg">
+                            ru
+                        </div>
+                        <div class="item">
+                            <img class="ui languages__flag image" src="./img/usa.svg">
+                            en
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+    <!-- trade
+    ======================================================= -->
+    <main class="trade">
+        <div class="container">
+            <div class="trade__inner">
+
+                <section class="trade-header trade__box-content">
+                    <div class="trade-header__id">
+                        <p class="trade-header__id-subtitle">ID Заявки</p>
+                        <div class="trade__copy">
+                            <h3 class="trade__title">371470bccecfec</h3>
+                            <button class="trade__copy-btn">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#copy" />
+                                </svg>
+                                <span class="trade__copy-message">Скопировано!</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trade-header__content">
+                        <p>
+                        <div class="countdown">
+                            <span id="mins">5</span>
+                            <span id="mins-text">минут</span>
+                            <span id="secs">0</span>
+                            <span id="secs-text">секунд</span>
+                        </div> до автоматической отмены заявки
+                        </p>
+                        <p>Пожалуйста пришлите средства, которые вы хотите обменять</p>
+                    </div>
+                </section>
+
+                <section class="trade-qr trade__box-content">
+                    <div class="trade-qr__content">
+                        <div class="trade__title-box">
+                            <p class="trade__subtitle">Сумма</p>
+                            <h3 class="trade__title">6000 USDTTRC20</h3>
+                        </div>
+                        <div class="trade__title-box">
+                            <p class="trade__subtitle">Сумма</p>
+                            <div class="trade__copy">
+                                <h3 class="trade__title">TPtV1NStgdNjBrhkKeF1bYvo5m7fR5DvkZ</h3>
+                                <button class="trade__copy-btn">
+                                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                        <use xlink:href="./img/icons/icons.svg#copy" />
+                                    </svg>
+                                    <span class="trade__copy-message">Скопировано!</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="./img/qr.png" alt="QR-Code" class="trade-qr__img">
+                </section>
+
+                <section class="trade-info trade__box-content">
+                    <ul class="trade-info__list">
+                        <li class="trade-info__item loaded">
+                            <div class="trade-info__item-img">
+                                <img src="./img/dashed-1.png">
+                                <div class="trade-loaded"></div>
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p>Ожидаем депозит</p>
+                        </li>
+                        <li class="trade-info__item loading">
+                            <div class="trade-info__item-img">
+                                <img src="./img/dashed-1.png">
+                                <div class="trade-loaded "></div>
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p>Ждём подтверждения</p>
+                        </li>
+                        <li class="trade-info__item">
+                            <div class="trade-info__item-img">
+                                <img src="./img/dashed-1.png">
+                                <div class="trade-loaded "></div>
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p>Обмениваем</p>
+                        </li>
+                        <li class="trade-info__item">
+                            <div class="trade-info__item-img">
+                                <img src="./img/dashed-1.png">
+                                <div class="trade-loaded "></div>
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p>Отправляем вам</p>
+                        </li>
+                    </ul>
+
+                    <div class="trade__title-box">
+                        <p class="trade__subtitle">Вы получите</p>
+                        <h3 class="trade__title">1.3248509 ETH</h3>
+                    </div>
+                    <div class="trade__title-box">
+                        <p class="trade__subtitle">Кошелёк получателя</p>
+                        <h3 class="trade__title">0xe13348fe13c8e710cc2fdbed8d1666588742937d</h3>
+                    </div>
+                    <div class="trade__title-box">
+                        <p class="trade__subtitle">ID принятой транзакции</p>
+                        <div class="trade__copy">
+                            <h3 class="trade__title">fdffg04360fdgfypew04489v89rd</h3>
+                            <button class="trade__copy-btn">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#copy" />
+                                </svg>
+                                <span class="trade__copy-message">Скопировано!</span>
+                            </button>
+                        </div>
+                        <div class="trade__links">
+                            блокчейн:
+                            <a href="#">ссылка1</a>
+                            <a href="#">ссылка2</a>
+                            <a href="#">ссылка3</a>
+                        </div>
+                    </div>
+                    <div class="trade__title-box">
+                        <p class="trade__subtitle">ID отправленной транзакции</p>
+                        <div class="trade__copy">
+                            <h3 class="trade__title">fdffg04360fdgfypew04489v89rd</h3>
+                            <button class="trade__copy-btn">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#copy" />
+                                </svg>
+                                <span class="trade__copy-message">Скопировано!</span>
+                            </button>
+                        </div>
+                        <div class="trade__links">
+                            блокчейн:
+                            <a href="#">ссылка1</a>
+                            <a href="#">ссылка2</a>
+                            <a href="#">ссылка3</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="trade-footer">
+                    <ul class="trade-footer__list">
+                        <li class="trade-footer__item checked">
+                            <div class="trade-footer__item-icon">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p class="trade-footer__item-text">Введите данные</p>
+                        </li>
+                        <li class="trade-footer__item checked">
+                            <div class="trade-footer__item-icon">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p class="trade-footer__item-text">Совершите обмен</p>
+                        </li>
+                        <li class="trade-footer__item">
+                            <div class="trade-footer__item-icon">
+                                <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./img/icons/icons.svg#check" />
+                                </svg>
+                            </div>
+                            <p class="trade-footer__item-text">Получите Ваши средства</p>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+    <!-- trade end -->
+
+
+
+
+
+    <!-- footer
+======================================================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="логотип BLACKJACK Exchange">
+            </a>
+
+            <div class="footer__content">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a href="trade.html" class="link">Обмен</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="about.html" class="link">О нас</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="faq.html" class="link">FAQ</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="contacts.html" class="link">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="soclist">
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#telegram" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#twitter" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#reddit" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#vk" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#medium" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#bitcoin" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#facebook" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#instagram" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__info">
+                    <div class="footer__contacts">
+                        <a href="#" class="footer__email">Support@blackjack.exchange</a>
+                        <a href="#" class="footer__email">Support@jabber.blackjack.exchange</a>
+                    </div>
+                    <div class="footer__reviews">
+                        <a href="#" class="footer__reviews-item footer__reviews-bestchange">
+                            <img src="./img/bestchange.png" alt="Bestchange">
+                        </a>
+                        <a href="#" class="footer__reviews-item footer__reviews-trustpilot">
+                            <img src="./img/trustpilot.png" alt="Trustpilot">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- footer End -->
+
+
+    <!-- Scripts -->
+    <script src="js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        var timeInSecs;
+        var ticker;
+
+        function startTimer(secs) {
+            timeInSecs = parseInt(secs);
+            ticker = setInterval("tick()", 1000);
+        }
+
+        function tick() {
+            var secs = timeInSecs;
+            if (secs > 0) {
+                timeInSecs--;
+            }
+            else {
+                clearInterval(ticker);
+                startTimer(5 * 60); // 5 minutes in seconds
+            }
+
+            var mins = Math.floor(secs / 60);
+            secs %= 60;
+
+            document.getElementById("mins-text").innerHTML =
+                (mins == 1 || (mins > 19 && mins % 10 == 1)) ? 'минуты' : ((mins > 1 && mins < 5) || (secs > 19 && secs % 10 > 1 && mins % 10 < 5)) ? 'минуты' : 'минут';
+            document.getElementById("secs-text").innerHTML =
+                (secs == 1 || (secs > 19 && secs % 10 == 1)) ? 'секунда' : ((secs > 1 && secs < 5) || (secs > 19 && secs % 10 > 1 && secs % 10 < 5)) ? 'секунды' : 'секунд';
+
+            document.getElementById("mins").innerHTML = mins;
+            document.getElementById("secs").innerHTML = secs;
+        }
+        startTimer(5 * 60); // 5 minutes in seconds
+    </script>
+</body>
+
+</html>

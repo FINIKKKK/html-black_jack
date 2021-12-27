@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обмен</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Fonts -->
+
+</head>
+
+<body>
+
+    <!-- header
+    ======================================================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="menu__list-wrapper">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="index.html" class="link">Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="trade.html" class="link active">Обмен</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="about.html" class="link">О нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="faq.html" class="link">FAQ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="contacts.html" class="link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ui languages dropdown">
+                    <div class="text">
+                        <img class="ui languages__flag image" src="./img/russia.svg">
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item selected active">
+                            <img class="ui languages__flag image" src="./img/russia.svg">
+                            ru
+                        </div>
+                        <div class="item">
+                            <img class="ui languages__flag image" src="./img/usa.svg">
+                            en
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+    <!-- trade-form
+    ======================================================= -->
+    <section class="trade-form">
+        <div class="container">
+            <form action="" class="trade-form__content" id="trade__form">
+
+                <div class="trade__form-input trade__form-num1 input-block trade__form-block">
+                    <label for="trade__form-num1" class="label">Отправляете:</label>
+                    <input type="number" step=0.001 id="trade__form-num1" name="trade__form-num1"
+                        class="input" placeholder="0.000">
+                    <div class="footerline">
+                        <p>Мин: 0.001</p>
+                        <p>Макс: 10</p>
+                    </div>
+                </div>
+
+                <div class="trade__form-input trade__form-num2 input-block trade__form-block">
+                    <label for="trade__form-num2" class="label">Получаете:</label>
+                    <input type="number" min="0.001" max="10" id="trade__form-num2" name="trade__form-num2"
+                        class="input" placeholder="0.000">
+                    <div class="footerline">
+                        <p>Мин: 0.001</p>
+                        <p>Макс: 10</p>
+                    </div>
+                </div>
+
+                <div class="trade__form-input trade__form-card1 input-block trade__form-block">
+                    <label for="trade__form-card1" class="label">Реквизиты:</label>
+                    <input type="text" id="trade__form-card1" name="trade__form-card1" class="input input-creditCard"
+                        placeholder="На кошелек">
+                </div>
+
+
+                <div class="trade__form-selects trade__form-block">
+                    <div class="trade__form-select select ui dropdown button" id="trade__form-select1">
+                        <span class="text">
+                            <i class="dropdown__item-img coin-btc"></i>
+                            Bitcoin (BTC)
+                        </span>
+                        <i class="dropdown icon"></i>
+                        <div class="menu hidden">
+                            <div class="dropdown-header">Криптовалюты</div>
+                            <div class="item active selected item__coin-btc">
+                                <i class="dropdown__item-img coin-btc"></i>
+                                Bitcoin (BTC)
+                            </div>
+                            <div class="item item__coin-eth">
+                                <i class="dropdown__item-img coin-eth"></i>
+                                Ethereum (ETH)
+                            </div>
+
+                            <div class="dropdown-header">Банки</div>
+                            <div class="item item__coin-alfabank">
+                                <i class="dropdown__item-img coin-alfabank"></i>
+                                Альфа-банк
+                            </div>
+                            <div class="item item__coin-mastercard">
+                                <i class="dropdown__item-img coin-mastercard"></i>
+                                MasterCard
+                            </div>
+                            <div class="item item__coin-sberbank">
+                                <i class="dropdown__item-img coin-sberbank"></i>
+                                Сбербанк
+                            </div>
+                            <div class="item item__coin-visa">
+                                <i class="dropdown__item-img coin-visa"></i>
+                                Visa
+                            </div>
+                            <div class="item item__coin-tincoff">
+                                <i class="dropdown__item-img coin-tincoff"></i>
+                                Тинькофф
+                            </div>
+                            <div class="item item__coin-privatbank">
+                                <i class="dropdown__item-img coin-privatbank"></i>
+                                Приват Банк
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="select-change__btn" id="trade__form-change">
+                        <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                            <use xlink:href="./img/icons/icons.svg#change" />
+                        </svg>
+                    </div>
+
+                    <div class="trade__form-select select ui dropdown button" id="trade__form-select2">
+                        <span class="text">
+                            <i class="dropdown__item-img coin-eth"></i>
+                            Ethereum (ETH)
+                        </span>
+                        <i class="dropdown icon"></i>
+                        <div class="menu hidden">
+                            <div class="dropdown-header">Криптовалюты</div>
+                            <div class="item item__coin-btc">
+                                <i class="dropdown__item-img coin-btc"></i>
+                                Bitcoin (BTC)
+                            </div>
+                            <div class="item item__coin-eth active selected">
+                                <i class="dropdown__item-img coin-eth"></i>
+                                Ethereum (ETH)
+                            </div>
+
+                            <div class="dropdown-header">Банки</div>
+                            <div class="item item__coin-alfabank">
+                                <i class="dropdown__item-img coin-alfabank"></i>
+                                Альфа-банк
+                            </div>
+                            <div class="item item__coin-mastercard">
+                                <i class="dropdown__item-img coin-mastercard"></i>
+                                MasterCard
+                            </div>
+                            <div class="item item__coin-sberbank">
+                                <i class="dropdown__item-img coin-sberbank"></i>
+                                Сбербанк
+                            </div>
+                            <div class="item item__coin-visa">
+                                <i class="dropdown__item-img coin-visa"></i>
+                                Visa
+                            </div>
+                            <div class="item item__coin-tincoff">
+                                <i class="dropdown__item-img coin-tincoff"></i>
+                                Тинькофф
+                            </div>
+                            <div class="item item__coin-privatbank">
+                                <i class="dropdown__item-img coin-privatbank"></i>
+                                Приват Банк
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="trade__form-input trade__form-card2 input-block trade__form-block">
+                    <input type="text" id="trade__form-card2" name="trade__form-card2" class="input input-creditCard"
+                        placeholder="Кошелек для возврата">
+                </div>
+
+                <ul class="trade__form-info trade__form-block">
+                    <li class="trade-form__info-item">Курс обмена: 1 BTC - 4191438.545 RUB</li>
+                    <li class="trade-form__info-item">Время обработки: 5-30 минут</li>
+                    <li class="trade-form__info-item">Количество подтверждений: 2</li>
+                </ul>
+
+                <button type="submit" class="trade__form-btn btn trade__form-block"
+                    id="trade__form-btn">Обменять</button>
+
+                <div class="trade__form-input trade__form-email input-block trade__form-block">
+                    <input type="email" id="trade__form-email" name="trade__form-email" class="input"
+                        placeholder="E-mail (не обязательно)*">
+                    <div class="footerline">
+                        <p>* не обязательно для заполнения, для отправки ID заявки</p>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="trade-footer">
+                <ul class="trade-footer__list">
+                    <li class="trade-footer__item checked">
+                        <div class="trade-footer__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="trade-footer__item-text">Введите данные</p>
+                    </li>
+                    <li class="trade-footer__item">
+                        <div class="trade-footer__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="trade-footer__item-text">Совершите обмен</p>
+                    </li>
+                    <li class="trade-footer__item">
+                        <div class="trade-footer__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#check" />
+                            </svg>
+                        </div>
+                        <p class="trade-footer__item-text">Получите Ваши средства</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- trade-form end -->
+
+
+    <!-- footer
+======================================================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="логотип BLACKJACK Exchange">
+            </a>
+
+            <div class="footer__content">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a href="trade.html" class="link">Обмен</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="about.html" class="link">О нас</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="faq.html" class="link">FAQ</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="contacts.html" class="link">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="soclist">
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#telegram" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#twitter" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#reddit" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#vk" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#medium" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#bitcoin" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#facebook" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#instagram" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__info">
+                    <div class="footer__contacts">
+                        <a href="#" class="footer__email">Support@blackjack.exchange</a>
+                        <a href="#" class="footer__email">Support@jabber.blackjack.exchange</a>
+                    </div>
+                    <div class="footer__reviews">
+                        <a href="#" class="footer__reviews-item footer__reviews-bestchange">
+                            <img src="./img/bestchange.png" alt="Bestchange">
+                        </a>
+                        <a href="#" class="footer__reviews-item footer__reviews-trustpilot">
+                            <img src="./img/trustpilot.png" alt="Trustpilot">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- footer End -->
+
+
+    <!-- Scripts -->
+    <script src="js/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+</body>
+
+</html>

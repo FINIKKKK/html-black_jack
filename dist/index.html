@@ -1,1 +1,577 @@
-<!DOCTYPE html><html lang="ru"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Главная</title>    <!-- Styles -->    <link rel="stylesheet" href="css/style.min.css">    <!-- Fonts --></head><body>    <!-- header======================================================= --><header class="header">    <div class="container">        <nav class="menu">        </nav>    </div></header><!-- header End -->    <!-- footer======================================================= --><footer class="footer">    <div class="container">        <div class="footer__inner">        </div>    </div></footer><!-- footer End -->        <!-- Scripts -->    <script src="js/script.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKJACK</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Fonts -->
+
+</head>
+
+<body class="body--home">
+
+    <!-- header
+    ======================================================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="menu__list-wrapper">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="index.html" class="link active">Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="trade.html" class="link">Обмен</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="about.html" class="link">О нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="faq.html" class="link">FAQ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="contacts.html" class="link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ui languages dropdown">
+                    <div class="text">
+                        <img class="ui languages__flag image" src="./img/russia.svg">
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item selected active">
+                            <img class="ui languages__flag image" src="./img/russia.svg">
+                            ru
+                        </div>
+                        <div class="item">
+                            <img class="ui languages__flag image" src="./img/usa.svg">
+                            en
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+    <!-- top
+    ======================================================= -->
+    <section class="top">
+        <div class="container">
+            <div class="top__inner">
+                <div class="top__logo">
+                    <img src="./img/logo.png" alt="логотип BLACKJACK Exchange">
+                </div>
+                <form action="" class="top__form" id="top__form">
+                    <div class="top__form-inner">
+
+                        <div class="top__form-block top__form-block1">
+                            <label for="top__form-num1" class="label">Отдаете:</label>
+
+                            <div class="top__form-box">
+                                <div class="top__form-select select ui dropdown button" id="top__form-select1">
+                                    <span class="text">
+                                        <i class="dropdown__item-img coin-btc"></i>
+                                        Bitcoin (BTC)
+                                    </span>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu hidden">
+                                        <div class="dropdown-header">Криптовалюты</div>
+                                        <div class="item active selected item__coin-btc">
+                                            <i class="dropdown__item-img coin-btc"></i>
+                                            Bitcoin (BTC)
+                                        </div>
+                                        <div class="item item__coin-eth">
+                                            <i class="dropdown__item-img coin-eth"></i>
+                                            Ethereum (ETH)
+                                        </div>
+
+                                        <div class="dropdown-header">Банки</div>
+                                        <div class="item item__coin-alfabank">
+                                            <i class="dropdown__item-img coin-alfabank"></i>
+                                            Альфа-банк
+                                        </div>
+                                        <div class="item item__coin-mastercard">
+                                            <i class="dropdown__item-img coin-mastercard"></i>
+                                            MasterCard
+                                        </div>
+                                        <div class="item item__coin-sberbank">
+                                            <i class="dropdown__item-img coin-sberbank"></i>
+                                            Сбербанк
+                                        </div>
+                                        <div class="item item__coin-visa">
+                                            <i class="dropdown__item-img coin-visa"></i>
+                                            Visa
+                                        </div>
+                                        <div class="item item__coin-tincoff">
+                                            <i class="dropdown__item-img coin-tincoff"></i>
+                                            Тинькофф
+                                        </div>
+                                        <div class="item item__coin-privatbank">
+                                            <i class="dropdown__item-img coin-privatbank"></i>
+                                            Приват Банк
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="top__form-input top__form-num1 input-block top__form-block">
+                                    <input type="number" step=0.01 id="top__form-num1" name="top__form-num1"
+                                        class="input" placeholder="0.000">
+                                </div>
+                            </div>
+
+                            <div class="footerline">
+                                <p>Мин: 0.00122811 BTC</p>
+                                <p>Макс: 0.20522584 BTC</p>
+                            </div>
+                        </div>
+
+                        <div class="select-change__btn" id="top__form-change">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#change" />
+                            </svg>
+                        </div>
+
+                        <div class="top__form-block top__form-block2">
+                            <label for="top__form-num2" class="label">Получаете:</label>
+
+                            <div class="top__form-box">
+                                <div class="top__form-input top__form-num2 input-block top__form-block">
+                                    <input type="number" step=0.01 id="top__form-num2" name="top__form-num2"
+                                        class="input" placeholder="0.000">
+                                </div>
+
+                                <div class="top__form-select select ui dropdown button" id="top__form-select2">
+                                    <span class="text">
+                                        <i class="dropdown__item-img coin-eth"></i>
+                                        Ethereum (ETH)
+                                    </span>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu hidden">
+                                        <div class="dropdown-header">Криптовалюты</div>
+                                        <div class="item item__coin-btc">
+                                            <i class="dropdown__item-img coin-btc"></i>
+                                            Bitcoin (BTC)
+                                        </div>
+                                        <div class="item active selected item__coin-eth">
+                                            <i class="dropdown__item-img coin-eth"></i>
+                                            Ethereum (ETH)
+                                        </div>
+
+                                        <div class="dropdown-header">Банки</div>
+                                        <div class="item item__coin-alfabank">
+                                            <i class="dropdown__item-img coin-alfabank"></i>
+                                            Альфа-банк
+                                        </div>
+                                        <div class="item item__coin-mastercard">
+                                            <i class="dropdown__item-img coin-mastercard"></i>
+                                            MasterCard
+                                        </div>
+                                        <div class="item item__coin-sberbank">
+                                            <i class="dropdown__item-img coin-sberbank"></i>
+                                            Сбербанк
+                                        </div>
+                                        <div class="item item__coin-visa">
+                                            <i class="dropdown__item-img coin-visa"></i>
+                                            Visa
+                                        </div>
+                                        <div class="item item__coin-tincoff">
+                                            <i class="dropdown__item-img coin-tincoff"></i>
+                                            Тинькофф
+                                        </div>
+                                        <div class="item item__coin-privatbank">
+                                            <i class="dropdown__item-img coin-privatbank"></i>
+                                            Приват Банк
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footerline">
+                                <p>Мин: 0.00122811 BTC</p>
+                                <p>Макс: 0.20522584 BTC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="top__form-btn btn" id="top__form-btn">Обменять</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- top end -->
+
+
+    <!-- benefits
+    ======================================================= -->
+    <section class="benefits">
+        <div class="container">
+            <h1 class="benefits__title title">НАШИ ПРЕИМУЩЕСТВА</h1>
+            <div class="benefits__inner">
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-1.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">Философия</h3>
+                    <p class="benefits__item-text">Анонимность является неоспоримым правом каждого человека в мире!
+                        Мы
+                        за финансовую свободу, децентрализацию и истинную философию blockchain.
+                    </p>
+                </div>
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-2.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">No KYC</h3>
+                    <p class="benefits__item-text">Мы не требуем верификации, предоставления личных данных и
+                        прохождения KYC для обмена.
+                    </p>
+                </div>
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-3.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">No Logs</h3>
+                    <p class="benefits__item-text">Мы не храним персональные данные наших клиентов, историю обменов,
+                        логов и т д.</p>
+                </div>
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-4.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">Безопасность</h3>
+                    <p class="benefits__item-text">Мы являемся некастодиальным сервисом обмена криптовалют, имеющий
+                        высокие стандарты безопасности и конфиденциальности</p>
+                </div>
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-5.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">Обмен без ограничений</h3>
+                    <p class="benefits__item-text">Обменивайте криптовалюту по самому выгодному курсу в любом
+                        количестве.</p>
+                </div>
+                <div class="benefits__item">
+                    <img src="./img/benefits__icon-6.svg"
+                        alt="Мы за финансовую свободу, децентрализацию и истинную философию blockchain."
+                        class="benefits__item-icon">
+                    <h3 class="benefits__item-title">Фиксированный курс</h3>
+                    <p class="benefits__item-text">Мы замораживаем курс во избежание колебания цен на время обмена.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- benefits end -->
+
+
+    <!-- reserves
+    ======================================================= -->
+    <section class="reserves">
+        <div class="container">
+            <h1 class="reserves__title title">Резервы Black Jack</h1>
+            <div class="reserves__inner">
+                <div class="reserves__item">
+                    <img src="./img/reserves/bitcoin.png" alt="Bitcoin" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Bitcoin</h5>
+                    <p class="reserves__item-text">258 BTC</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/ethereum.png" alt="Ethereum" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Ethereum</h5>
+                    <p class="reserves__item-text">930 ETH</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/alfa-bank.png" alt="Альфа-банк" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Альфа-банк</h5>
+                    <p class="reserves__item-text">500 000 ₽</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/mastercard.png" alt="MasterCard" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">MasterCard</h5>
+                    <p class="reserves__item-text">450 000 $</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/payeer.png" alt="Payeer" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Payeer</h5>
+                    <p class="reserves__item-text">15 000 $</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/paypal.png" alt="PayPal" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">PayPal</h5>
+                    <p class="reserves__item-text">60 000 $</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/sberbank.png" alt="Сбербанк" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Сбербанк</h5>
+                    <p class="reserves__item-text">1 000 000 ₽</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/webmoney.png" alt="WebMoney" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">WebMoney</h5>
+                    <p class="reserves__item-text">40 000 $</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/visa.png" alt="Visa" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Visa</h5>
+                    <p class="reserves__item-text">85 000 $</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/qiwi.png" alt="Qiwi" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Qiwi</h5>
+                    <p class="reserves__item-text">300 000 ₽</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/tinkoff.png" alt="Тинькофф" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Тинькофф</h5>
+                    <p class="reserves__item-text">12 000 000 ₽</p>
+                </div>
+                <div class="reserves__item">
+                    <img src="./img/reserves/privatbank.png" alt="Приват Банк" class="reserves__item-icon">
+                    <h5 class="reserves__item-title">Приват Банк</h5>
+                    <p class="reserves__item-text">700 000 ₽</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- reserves end -->
+
+
+      <!-- faq
+    ======================================================= -->
+    <section class="faq">
+        <div class="container">
+            <h1 class="faq__title title">Вопросы и ответы</h1>
+            <div class="faq__inner">
+
+                <ul class="faq__filters">
+                    <li class="faq__filters-item active">About</li>
+                    <li class="faq__filters-item">Cryptocurrency Exchange Process </li>
+                    <li class="faq__filters-item">Buy Crypto With Fiat</li>
+                    <li class="faq__filters-item">KYC/AML</li>
+                    <li class="faq__filters-item">Для партнёров</li>
+                </ul>
+
+                <div class="questions active">
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.
+                            Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                    <div class="question__item">
+                        <h3 class="question__item-title">Что такое Black Jack Exchange?</h3>
+                        <p class="question__item-text">Black Jack Exchange - простой и быстрый обменник, Вам не нужно
+                            регистрироваться, и для Вас не будет никаких лимитов. Мы возьмем честную комиссию и быстро
+                            обменяем любые криптовалюты.</p>
+                        <button class="question__item-btn">+</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- faq end -->
+
+
+    <!-- footer
+======================================================= -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="логотип BLACKJACK Exchange">
+            </a>
+
+            <div class="footer__content">
+                <ul class="menu__list">
+                    <li class="menu__list-item">
+                        <a href="trade.html" class="link">Обмен</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="about.html" class="link">О нас</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="faq.html" class="link">FAQ</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a href="contacts.html" class="link">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="soclist">
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#telegram" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#twitter" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#reddit" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#vk" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#medium" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#bitcoin" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#facebook" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="soclist__item">
+                        <a href="#">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#instagram" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__info">
+                    <div class="footer__contacts">
+                        <a href="#" class="footer__email">Support@blackjack.exchange</a>
+                        <a href="#" class="footer__email">Support@jabber.blackjack.exchange</a>
+                    </div>
+                    <div class="footer__reviews">
+                        <a href="#" class="footer__reviews-item footer__reviews-bestchange">
+                            <img src="./img/bestchange.png" alt="Bestchange">
+                        </a>
+                        <a href="#" class="footer__reviews-item footer__reviews-trustpilot">
+                            <img src="./img/trustpilot.png" alt="Trustpilot">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- footer End -->
+
+
+    <!-- Scripts -->
+    <script src="js/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+</body>
+
+</html>

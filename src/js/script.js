@@ -3,10 +3,11 @@
 
 
 // Plugins ----------------
-
+@@include('./semantic.min.js');
+@@include('./jquery.maskedinput.js');
 
 
 // Main-JS -----------------
-@@include('../js/main.js');
+@@include('./main.js');
 
 

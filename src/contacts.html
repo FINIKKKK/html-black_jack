@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./blocks/_head.html', {
+"title": "Наши Контакты",
+})
+
+<body>
+
+    <!-- header
+    ======================================================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="menu__list-wrapper">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="index.html" class="link">Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="trade.html" class="link">Обмен</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="about.html" class="link">О нас</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="faq.html" class="link">FAQ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="contacts.html" class="link active">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ui languages dropdown">
+                    <div class="text">
+                        <img class="ui languages__flag image" src="./img/russia.svg">
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item selected active">
+                            <img class="ui languages__flag image" src="./img/russia.svg">
+                            ru
+                        </div>
+                        <div class="item">
+                            <img class="ui languages__flag image" src="./img/usa.svg">
+                            en
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+    <!-- contacts
+    ======================================================= -->
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__header">
+                <h1 class="contacts__title title">Наши контакты</h1>
+                <p class="contacts__text">Уважаемый клиент! Если у Вас возникли вопросы по работе нашего обменного
+                    сервиса,
+                    Вы всегда можете написать нам на почту, задать вопрос сотрудникам онлайн-поддержки в чате, отправить
+                    письмо через форму или в Telegram.</p>
+            </div>
+            <div class="contacts__inner">
+
+                <ul class="contacts__info-list">
+                    <li class="contacts__info-item">
+                        <div class="contacts__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#email" />
+                            </svg>
+                        </div>
+                        <div class="contacts__item-info">
+                            <p class="contacts__item-subtitle">Email по техническим вопросам</p>
+                            <a href="#" class="contacts__item-title">support@blackjack.ru</a>
+                        </div>
+                    </li>
+                    <li class="contacts__info-item">
+                        <div class="contacts__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#message" />
+                            </svg>
+                        </div>
+                        <div class="contacts__item-info">
+                            <p class="contacts__item-subtitle">Онлайн-чат поддержки</p>
+                            <a href="#" class="contacts__item-title">Открыть чат</a>
+                        </div>
+                    </li>
+                    <li class="contacts__info-item contacts__info-item--clock">
+                        <div class="contacts__item-icon">
+                            <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                                <use xlink:href="./img/icons/icons.svg#clock" />
+                            </svg>
+                        </div>
+                        <div class="contacts__item-info">
+                            <p class="contacts__item-subtitle">Время работы</p>
+                            <h5 class="contacts__item-title">Круглосуточно</h5>
+                        </div>
+                    </li>
+                </ul>
+
+                <form id="contacts__form" action="" class="contacts__form">
+                    <div class="contacts__form-inputs">
+                        <div class="contacts__form-input input-block">
+                            <input type="email" id="contacts__form-email" name="contacts__form-email" class="input"
+                                placeholder="Ваш e-mail">
+                        </div>
+
+                        <div class="contacts__form-input input-block">
+                            <input type="text" id="contacts__form-name" name="contacts__form-name" class="input"
+                                placeholder="Ваше имя">
+                        </div>
+                    </div>
+
+                    <textarea name="contacts__form-message" id="contacts__form-message" cols="30" rows="10"
+                        class="contacts__form-textarea input" placeholder="Ваше сообщение"></textarea>
+
+                    <button type="submit" class="contacts__form-button btn">Отправить</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- contacts end -->
+
+
+    @@include('./blocks/_footer.html')
+
+
+    <!-- Scripts -->
+    @@include('./blocks/_js.html')
+
+</body>
+
+</html>

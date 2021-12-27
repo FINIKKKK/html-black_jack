@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Fonts -->
+
+</head>
+
+<body style=" display: flex; justify-content: center;">
+    <div class="container">
+
+        <!-- header
+        ======================================================= -->
+        <header class="header">
+            <div class="container">
+                <nav class="menu">
+                    <div class="menu__list-wrapper">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a href="index.html" class="link">Главная</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="trade.html" class="link">Обмен</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="about.html" class="link">О нас</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="faq.html" class="link">FAQ</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="contacts.html" class="link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ui languages dropdown">
+                        <div class="text">
+                            <img class="ui languages__flag image" src="./img/russia.svg">
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item selected active">
+                                <img class="ui languages__flag image" src="./img/russia.svg">
+                                ru
+                            </div>
+                            <div class="item">
+                                <img class="ui languages__flag image" src="./img/usa.svg">
+                                en
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- header End -->
+
+
+        <!-- buttons -->
+        <button class="btn">default</button>
+        <button class="btn loading">loading</button>
+        <button class="btn disabled">disabled</button>
+
+
+        <br>
+        <br>
+
+
+        <div class="trade">
+            <div class="trade__title-box">
+                <p class="trade__subtitle">Сумма</p>
+                <div class="trade__copy">
+                    <h3 class="trade__title">TPtV1NStgdNjBrhkKeF1bYvo5m7fR5DvkZ</h3>
+                    <button class="trade__copy-btn">
+                        <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                            <use xlink:href="./img/icons/icons.svg#copy" />
+                        </svg>
+                        <span class="trade__copy-message">Скопировано!</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+
+        <ul class="trade-info__list">
+            <li class="trade-info__item loaded">
+                <div class="trade-info__item-img">
+                    <img src="./img/dashed-1.png">
+                    <div class="trade-loaded"></div>
+                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                        <use xlink:href="./img/icons/icons.svg#check" />
+                    </svg>
+                </div>
+                <p>loaded</p>
+            </li>
+            <li class="trade-info__item loading">
+                <div class="trade-info__item-img">
+                    <img src="./img/dashed-1.png">
+                    <div class="trade-loaded "></div>
+                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                        <use xlink:href="./img/icons/icons.svg#check" />
+                    </svg>
+                </div>
+                <p>loading</p>
+            </li>
+            <li class="trade-info__item">
+                <div class="trade-info__item-img">
+                    <img src="./img/dashed-1.png">
+                    <div class="trade-loaded "></div>
+                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                        <use xlink:href="./img/icons/icons.svg#check" />
+                    </svg>
+                </div>
+                <p>default</p>
+            </li>
+        </ul>
+
+
+        <br>
+        <br>
+
+
+        <ul class="trade-footer__list">
+            <li class="trade-footer__item checked">
+                <div class="trade-footer__item-icon">
+                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                        <use xlink:href="./img/icons/icons.svg#check" />
+                    </svg>
+                </div>
+                <p class="trade-footer__item-text">checked</p>
+            </li>
+            <li class="trade-footer__item">
+                <div class="trade-footer__item-icon">
+                    <svg width="20" height="20" xmlns:xlink="http://www.w3.org/2000/svg">
+                        <use xlink:href="./img/icons/icons.svg#check" />
+                    </svg>
+                </div>
+                <p class="trade-footer__item-text">default</p>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <div class="trade__form-select select select-1 ui dropdown button" style="width: 100%;">
+            <span class="text">
+                <i class="dropdown__item-img coin-btc"></i>
+                Bitcoin (BTC)
+            </span>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="dropdown-header">Криптовалюты</div>
+                <div class="item active selected item__coin-btc">
+                    <i class="dropdown__item-img coin-btc"></i>
+                    Bitcoin (BTC)
+                </div>
+                <div class="item item__coin-eth">
+                    <i class="dropdown__item-img coin-eth"></i>
+                    Ethereum (ETH)
+                </div>
+
+                <div class="dropdown-header">Банки</div>
+                <div class="item item__coin-alfabank">
+                    <i class="dropdown__item-img coin-alfabank"></i>
+                    Альфа-банк
+                </div>
+                <div class="item item__coin-mastercard">
+                    <i class="dropdown__item-img coin-mastercard"></i>
+                    MasterCard
+                </div>
+                <div class="item item__coin-sberbank">
+                    <i class="dropdown__item-img coin-sberbank"></i>
+                    Сбербанк
+                </div>
+                <div class="item item__coin-visa">
+                    <i class="dropdown__item-img coin-visa"></i>
+                    Visa
+                </div>
+                <div class="item item__coin-tincoff">
+                    <i class="dropdown__item-img coin-tincoff"></i>
+                    Тинькофф
+                </div>
+                <div class="item item__coin-privatbank">
+                    <i class="dropdown__item-img coin-privatbank"></i>
+                    Приват Банк
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="input-block">
+            <label for="num--test1" class="label">Отправляете:</label>
+            <input type="number" step=0.001 id="num--test1" name="num--test1"
+                class="input input-error" placeholder="0.000">
+            <div class="footerline">
+                <p>Мин: 0.001</p>
+                <p>Макс: 10</p>
+            </div>
+            <span class="error" style="width: 120px;">Должно быть между 0.001 до 10</span>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="input-block">
+            <input type="text" id="card--test1" name="card--test1" id="card--test1"
+                class="input input-error input-creditCard" placeholder="На кошелек">
+            <span class="error">Заполните поле</span>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="input-block">
+            <label for="card--test2" class="label">Реквизиты:</label>
+            <input type="text" id="card--test2" name="card--test2"
+                class="input input-creditCard input-error" placeholder="На кошелек">
+            <span class="error" style="top: 64%;">Заполните правильно</span>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="input-block">
+            <label for="num--test1" class="label">Отправляете:</label>
+            <input type="number" step=0.001 id="num--test1" name="num--test1"
+                class="input" placeholder="0.000">
+            <div class="footerline">
+                <p>Мин: 0.001</p>
+                <p>Макс: 10</p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+    </div>
+    <!-- Scripts -->
+    <script src="js/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+</body>
+
+</html>

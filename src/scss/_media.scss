@@ -1,91 +1,1078 @@
 //Max-Width: 1279px ================================
 @media (max-width: 1279px) {
-
 }
 
 //Max-Width: 1200px ================================
 @media (max-width: 1200px) {
-
 }
 
 //Max-Width: 1150px ================================
 @media (max-width: 1150px) {
-
 }
 
 //Max-Width: 1100px ================================
 @media (max-width: 1100px) {
-
 }
 
 //Max-Width: 1023px ================================
 @media (max-width: 1023px) {
+    .trade-form .trade-form__content {
+        display: grid;
+        grid-template-areas:
+            "block-1 block-2"
+            "block-4 block-4"
+            "block-3 block-5"
+            "block-6 block-8"
+            "block-7 block-7";
+        grid-template-columns: repeat(2, 49%);
+        grid-gap: 15px;
+        align-items: flex-end;
+        justify-content: start;
+    }
+    .trade-form .trade__form-btn {
+        margin-right: 0px;
+        flex: 0 0 auto !important;
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .trade-form .trade__form-selects {
+        flex: 0 0 auto !important;
+        margin-bottom: 15px;
+    }
+    .trade-form .trade-form__content ul {
+        margin-bottom: 25px;
+    }
+    .trade__form-num1 {
+        grid-area: block-1;
+    }
+    .trade__form-num2 {
+        grid-area: block-2;
+    }
+    .trade__form-card1 {
+        grid-area: block-3;
+    }
+    .trade__form-selects {
+        grid-area: block-4;
+    }
+    .trade__form-card2 {
+        grid-area: block-5;
+    }
+    .trade__form-info {
+        grid-area: block-6;
+    }
+    .trade__form-btn {
+        grid-area: block-7;
+    }
+    .trade__form-email {
+        grid-area: block-8;
+    }
+    .trade-form .trade__form-block {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+    .contacts .contacts__form-input:not(:last-child) {
+        margin-right: 10px;
+    }
+    .contacts .contacts__form-input {
+        margin-bottom: 10px;
+        input {
+            padding-right: 15px;
+            &.input-error {
+                border-color: #a80000;
+            }
+        }
+        span {
+            transform: none;
+            bottom: -10px;
+            top: auto;
+            width: 100%;
+            background-color: #a80000;
+            color: #fff;
+            right: 0;
+            padding: 0px 10px;
+            border-radius: 0px 0 10px 10px;
+        }
+    }
+    .contacts textarea {
+        margin-bottom: 15px;
+    }
+    .contacts ul {
+        margin-right: 30px;
+    }
+}
 
+//Max-Width: 900px ================================
+@media (max-width: 950px) {
+    .top .top__form-input {
+        width: 70%;
+    }
+    .footer__inner {
+        display: block;
+    }
+    .footer .logo {
+        margin-bottom: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer__content {
+        width: 100%;
+    }
 }
 
 //Max-Width: 900px ================================
 @media (max-width: 900px) {
-
+    body {
+        padding-top: 80px;
+    }
+    .header {
+        z-index: 150;
+        position: fixed;
+        width: 100%;
+        nav {
+            background: none;
+        }
+    }
+    .header .languages {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+    .header .hamburger {
+        display: flex;
+    }
+    .menu__list-wrapper {
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+    }
+    .header {
+        .menu__list-wrapper {
+            pointer-events: none;
+        }
+    }
+    .header .menu__list {
+        width: 100%;
+        z-index: 210;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        li {
+            width: 100%;
+            transition: background-color 0.5s;
+            a {
+                font-size: 26px;
+                line-height: 34px;
+                font-weight: 700;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .header .menu__list li:not(:last-child) {
+        margin-right: 0px;
+    }
+    .reserves .reserves__inner div {
+        flex: 0 0 auto;
+        padding: 0 20px;
+        margin-bottom: 80px;
+    }
+    .benefits .benefits__inner div {
+        padding: 29px 15px 20px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    .benefits .benefits__inner {
+        margin-bottom: -15px;
+        margin-right: -15px;
+    }
 }
 
 //Max-Width: 850px ================================
 @media (max-width: 850px) {
-
+    .benefits .benefits__item img {
+        margin-bottom: 15px;
+        width: 60px;
+        height: 60px;
+    }
+    .benefits .benefits__item h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+    .benefits .benefits__item p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .contacts .contacts__form-inputs {
+        display: block;
+    }
+    .contacts .contacts__form-input {
+        width: 100%;
+    }
+    .contacts .contacts__form-input:not(:last-child) {
+        margin-right: 0px;
+    }
+    .faq {
+        margin-bottom: 50px;
+    }
+    .faq ul {
+        width: 20%;
+        margin-right: 50px;
+    }
+    .questions {
+        width: 80%;
+    }
+    .faq li {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .faq li:not(:last-child) {
+        margin-bottom: 14px;
+    }
 }
 
 //Планшет #########################################
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
-
+    .top {
+        margin-bottom: 140px;
+    }
+    .top .top__form-input span {
+        font-size: 8px;
+        line-height: 13px;
+    }
+    .top .select-change__btn {
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+        margin-top: 12px;
+        margin-right: 6px;
+    }
+    .top .top__form button {
+        padding: 10px 69px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .top .select.ui.dropdown {
+        padding: 10px 10px;
+        font-size: 16px;
+        line-height: 22px;
+        height: 40px;
+    }
+    .top .input-block input {
+        padding: 10px 10px;
+        font-size: 16px;
+        line-height: 22px;
+        height: 40px;
+    }
+    .top .top__form-box {
+        margin-top: 5px;
+    }
+    .top label {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .top .footerline {
+        margin-top: 5px;
+        p {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    .top__logo {
+        margin: 0 auto;
+        width: 224px;
+        height: 140px;
+        margin-bottom: 20px;
+    }
+    .top .top__form-inner {
+        margin-bottom: 25px;
+    }
+    .reserves h1 {
+        margin-bottom: 66px;
+    }
+    .reserves .reserves__inner div {
+        margin-bottom: 60px;
+    }
+    .reserves .reserves__inner {
+        margin-bottom: -60px;
+    }
+    .reserves {
+        margin-bottom: 150px;
+    }
+    .questions .question__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .questions .question__item {
+        padding: 13px;
+    }
+    .questions .question__item h3 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .questions .question__item button {
+        top: 13px;
+        right: 12px;
+        font-size: 28px;
+        line-height: 18px;
+    }
+    .questions .question__item::after {
+        top: 17px;
+        right: 12px;
+        font-size: 28px;
+        line-height: 18px;
+    }
+    .questions .question__item p {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .title {
+        font-size: 32px;
+        line-height: 41px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+    .about__text p {
+        margin-bottom: 14px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .about__text b {
+        margin-bottom: 14px;
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 //Max-Width: 750px ================================
 @media (max-width: 750px) {
-
+    .top {
+        .select.ui.dropdown {
+            padding: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .select.ui.dropdown .menu {
+            padding-top: 5px;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+            width: 25px;
+            height: 25px;
+        }
+        .select.ui.dropdown .menu > .item {
+            padding: 5px 10px !important;
+            font-size: 13px;
+            line-height: 17px;
+            padding-left: 43px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: 10px;
+        }
+        .select.ui.dropdown .menu > .dropdown-header {
+            margin: 3px 10px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .top__form-block2 {
+        .select.ui.dropdown .menu > .item {
+            padding-right: 43px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: auto;
+            right: 10px;
+        }
+    }
+    .trade-form .input-block {
+        margin-bottom: 10px;
+        input {
+            padding-right: 15px;
+            &.input-error {
+                border-color: #a80000;
+            }
+        }
+        span {
+            transform: none;
+            bottom: -10px;
+            top: auto;
+            width: 100%;
+            background-color: #a80000;
+            color: #fff;
+            right: 0;
+            padding: 0px 10px;
+            border-radius: 0px 0 10px 10px;
+        }
+    }
+    .trade-form .trade__form-email {
+        span {
+            top: 47px;
+            bottom: auto;
+        }
+    }
+    .trade-form .trade__form-num1,
+    .trade__form-num2 {
+        span {
+            bottom: 18px;
+        }
+    }
+    .footer .footer__info {
+        width: 40%;
+    }
+    .contacts .contacts__header p {
+        margin-bottom: 45px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .contacts__title {
+        margin-bottom: 15px;
+    }
+    .contacts {
+        margin-bottom: 50px;
+    }
 }
 
 //Max-Width: 700px ================================
 @media (max-width: 700px) {
-
+    .top .select.ui.dropdown {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .top .select .dropdown__item-img::before {
+        width: 18px;
+        height: 18px;
+    }
+    .top__form-block2 .select.ui.dropdown>.text {
+        padding-right: 22px;
+    }
+    .top .select .dropdown__item-img {
+        margin-right: 5px;
+    }
+    .top {
+        .select.ui.dropdown>.dropdown.icon {
+            right: 8px;
+        }
+    }
+    .top__form-block2 .select.ui.dropdown>.dropdown.icon {
+        right: auto;
+        left: 8px;
+    }
+    .top__form-block2 .select .text .dropdown__item-img {
+        right: 10px;
+    }
+    .footer .logo {
+        width: 126px;
+        height: 81px;
+        margin-bottom: 20px;
+    }
+    .footer__content {
+        display: block;
+    }
+    .footer .menu__list {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .footer .soclist {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: -5px;
+    }
+    .footer .footer__info {
+        width: 100%;
+        margin-left: 0;
+    }
+    .footer .footer__contacts {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: -20px;
+        margin-right: -20px;
+    }
+    .footer .footer__reviews {
+        justify-content: center;
+    }
+    .footer .footer__contacts a {
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    .benefits {
+        margin-bottom: 150px;
+    }
+    .benefits h1 {
+        margin-bottom: 47px;
+    }
+    .benefits .benefits__inner div {
+        width: 47%;
+    }
+    .contacts__form-input {
+        input {
+            padding: 10px !important;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        textarea {
+            padding: 10px !important;
+            font-size: 16px !important;
+            line-height: 20px !important;
+        }
+        span {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    .contacts__form {
+        textarea {
+            padding: 10px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .contacts .contacts__item-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .contacts .contacts__item-info p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .contacts .contacts__item-info a,
+    .contacts h5 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .contacts ul {
+        margin-right: 20px;
+    }
+    .contacts__form-button {
+        padding: 10px 70px;
+        font-size: 16px;
+        line-height: 18px;
+    }
 }
 
 //Телефон #########################################
 //Max-Width: 641px ================================
 @media (max-width: 641px) {
-
+    .select.ui.dropdown {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .select.ui.dropdown .menu {
+        padding-top: 5px;
+    }
+    .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+        width: 25px;
+        height: 25px;
+    }
+    .select.ui.dropdown .menu > .item {
+        padding: 5px 10px !important;
+        font-size: 13px;
+        line-height: 17px;
+        padding-left: 43px !important;
+    }
+    .select.ui.dropdown .menu > .item .dropdown__item-img {
+        left: 10px;
+    }
+    .select.ui.dropdown .menu > .dropdown-header {
+        margin: 3px 10px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .trade-form .trade-form__content {
+        padding: 25px 20px;
+    }
+    .trade-form {
+        margin-bottom: 60px;
+    }
+    .input-block label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .trade-form .input-block input {
+        padding-right: 10px;
+    }
+    .trade-form .input-block input {
+        height: 45px;
+        margin-top: 5px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .trade-form input {
+        padding: 10px 10px;
+    }
+    .trade-form .input-block span {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .trade__form-btn {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 10px;
+    }
+    .trade-form .select-change__btn {
+        width: 45px;
+        height: 45px;
+    }
+    .trade-form .trade__form-select {
+        height: 45px;
+    }
+    .trade-form .trade__form-selects {
+        margin-bottom: 0px;
+    }
 }
 
 //Max-Width: 600px ================================
 @media (max-width: 600px) {
-
+    .top__form-block2 {
+        margin-top: 15px;
+        text-align: left;
+    }
+    .top .select-change__btn {
+        display: none;
+    }
+    .top .top__form-block {
+        width: 100%;
+    }
+    .top .top__form-inner {
+        display: block;
+    }
+    .trade-info .trade-info__list li {
+        max-width: 90px;
+    }
+    .faq ul {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px - 14px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: -15px;
+        justify-content: center;
+    }
+    .faq li:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .faq li {
+        margin-bottom: 14px !important;
+        margin-right: 15px;
+        padding-left: 0;
+        padding-bottom: 5px;
+    }
+    .faq li::before {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        top: auto;
+    }
+    .questions {
+        width: 100%;
+    }
+    .faq__inner {
+        display: block;
+    }
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .about__text p {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .about__text b {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .about {
+        margin-bottom: 50px;
+    }
 }
 
 //Max-Width: 550px ================================
 @media (max-width: 550px) {
-
+    .trade-qr {
+        flex-direction: column;
+    }
+    .trade-qr__content {
+        order: 2;
+    }
+    .trade-qr__img {
+        order: 1;
+        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .trade-footer .trade-footer__item-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .trade-footer .trade-footer__item p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .trade-footer ul::after {
+        top: 17.5px;
+    }
+    .benefits .benefits__item img {
+        margin-bottom: 10px;
+        width: 45px;
+        height: 45px;
+    }
+    .benefits .benefits__item h3 {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+    .benefits .benefits__item p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .benefits .benefits__inner div {
+        width: 45%;
+    }
+    .reserves .reserves__item p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .reserves .reserves__item h5 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .reserves h1 {
+        margin-bottom: 36px;
+    }
+    .reserves .reserves__inner div {
+        padding: 0 15px;
+    }
+    .contacts .contacts__inner {
+        display: block;
+    }
+    .contacts ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-right: -30px;
+        margin-bottom: 10px;
+    }
+    .contacts form {
+        width: 100%;
+    }
+    .contacts .contacts__header p {
+        margin-bottom: 35px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .contacts li:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .contacts li {
+        margin-bottom: 30px !important;
+        margin-right: 30px;
+    }
 }
 
 //Max-Width: 500px ================================
 @media (max-width: 500px) {
-
+    .trade__form-select:nth-child(1) {
+        margin-right: 10px !important;
+    }
+    .select .dropdown__item-img::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+    }
+    .select .dropdown__item-img {
+        margin-right: 5px;
+    }
+    .select.ui.dropdown > .dropdown.icon {
+        right: 6px;
+    }
+    .trade .select.ui.dropdown {
+        padding: 5px;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+    }
+    .trade-form .select-change__btn {
+        display: none;
+    }
+    .trade-form .footerline {
+        margin-top: 5px;
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .trade__form .footerline p {
+    }
+    .trade-form .trade-form__content {
+        display: grid;
+        grid-template-areas:
+            "block-1 block-2"
+            "block-4 block-4"
+            "block-3 block-3"
+            "block-5 block-5"
+            "block-8 block-8"
+            "block-6 block-6"
+            "block-7 block-7";
+        grid-template-columns: repeat(2, 49%);
+        grid-gap: 15px;
+        align-items: flex-end;
+        justify-content: start;
+    }
+    .trade-form .trade-form__content {
+        padding: 20px 10px;
+    }
+    .input-block label {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .trade-form .trade-form__content ul {
+        margin-bottom: 10px;
+    }
+    .trade-form .trade__form-btn {
+        width: 100%;
+    }
+    .trade-info .trade-info__item p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .footer .footer__reviews a {
+        margin-right: 10px;
+        transform: scale(0.85);
+    }
+    .footer .footer__reviews {
+        margin-right: -10px;
+    }
+    .footer__inner {
+        padding: 30px 15px;
+    }
+    .footer .footer__contacts a {
+        font-size: 14px;
+        line-height: 16px;
+        margin-right: 15px;
+    }
+    .footer .footer__contacts {
+        margin-right: -15px;
+    }
+    .footer .footer__contacts a:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .footer .soclist li {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        svg {
+            width: 13px;
+            height: 13px;
+        }
+    }
+    .footer .soclist {
+        margin-right: -10px;
+        margin-bottom: 10px;
+    }
+    .footer .menu__list {
+        margin-bottom: 0px;
+    }
 }
 
 //Max-Width: 450px ================================
 @media (max-width: 450px) {
-
+    .top__logo {
+        width: 150px;
+        height: 90px;
+    }
+    .trade-form .input-block span {
+        font-size: 8px;
+        line-height: 14px;
+    }
+    .trade-header .trade-header__content p {
+        margin-bottom: 5px;
+    }
+    .trade-header {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .trade-header .trade-header__id {
+        margin-bottom: 5px;
+    }
+    .trade .trade__copy button {
+        height: 20px;
+        svg {
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+    }
+    .trade .trade__title-box p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+    .trade .trade__links {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .trade .trade__title-box h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .trade-info .trade-info__list li {
+        max-width: 66px;
+    }
+    .trade .trade__box-content {
+        padding: 10px;
+    }
+    .trade-footer li {
+        max-width: 100px;
+    }
+    .benefits h1 {
+        margin-bottom: 26px;
+    }
+    .benefits {
+        margin-bottom: 120px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .benefits .benefits__inner div {
+        padding: 15px 10px 15px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .benefits .benefits__inner {
+        margin-bottom: -10px;
+        margin-right: -10px;
+    }
+    .contacts li {
+        margin-bottom: 15px !important;
+        margin-right: 30px;
+        width: 100%;
+    }
+    .questions .question__item {
+        padding: 10px;
+    }
+    .questions .question__item p {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .questions .question__item button {
+        font-size: 20px;
+        line-height: 13px;
+    }
+    .questions .question__item::after {
+        width: 8px;
+    }
+    .faq ul {
+        margin-bottom: 13px;
+    }
+    .faq li {
+        font-size: 12px;
+    }
 }
 
 //Max-Width: 400px ================================
 @media (max-width: 400px) {
-
+    .benefits .benefits__inner div {
+        width: 47%;
+    }
+    .reserves .reserves__item p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .reserves .reserves__item h5 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .reserves .reserves__item img {
+        width: 33px;
+        height: 33px;
+        margin-bottom: 5px;
+    }
+    .reserves .reserves__inner div {
+        padding: 0 10px;
+        margin-bottom: 40px;
+    }
+    .reserves .reserves__inner {
+        margin-bottom: -40px;
+    }
+    .reserves {
+        margin-bottom: 120px;
+    }
+    .title {
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+    }
+    .about__text p {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .about__text b {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .about {
+        margin-bottom: 40px;
+    }
 }
 
 //Max-Width: 359px ================================
 @media (max-width: 359px) {
-    
+    .trade__form-select:nth-child(1) {
+        margin-right: 5px !important;
+    }
+    .footer .logo {
+        width: 110px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    .benefits .benefits__item img {
+        margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .benefits .benefits__item h3 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .benefits .benefits__item p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .benefits .benefits__inner div {
+        width: 45%;
+    }
 }
 
 //Max-Width: 340px ================================
 @media (max-width: 340px) {
-    
 }
