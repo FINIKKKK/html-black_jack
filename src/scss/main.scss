@@ -61,7 +61,7 @@
     .hamburger {
         display: none;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         top: 10px;
         left: 10px;
         flex-direction: column;
@@ -75,8 +75,8 @@
             position: absolute;
             background-color: #000;
             border: 1px solid rgba(#c1995e, 1);
-            top: -65px;
-            left: -65px;
+            top: -73px;
+            left: -69px;
             width: 120px;
             height: 120px;
             border-radius: 50%;
@@ -395,6 +395,9 @@
         padding-left: 30px;
         position: relative;
         transition: 0.3s;
+        background: $gray;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         &::before {
             opacity: 0;
             transition: 0.3s;
@@ -416,7 +419,9 @@
             }
         }
         &:hover {
-            color: #fff;
+            background: #fff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     li:not(:last-child) {
@@ -555,7 +560,7 @@
     }
     .reserves__inner {
         display: flex;
-        align-items: center;
+        align-items: start;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: -90px;
@@ -612,11 +617,14 @@
     .trade__copy {
         display: flex;
         align-items: start;
+        h3 {
+            margin-top: 2px;
+        }
         button {
             position: relative;
             margin-left: 8px;
             svg {
-                margin-top: -2px;
+                margin-top: -5px;
                 width: 14px;
                 height: 14px;
                 fill: transparent;
@@ -1126,7 +1134,7 @@
         padding-left: 15px !important;
         padding-right: 65px !important;
     }
-    .ui.dropdown .menu>.item {
+    .ui.dropdown .menu > .item {
         text-align: right;
     }
 }

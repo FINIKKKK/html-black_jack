@@ -521,65 +521,6 @@ template {
  *
  */
 
-/*******************************
-             Page
-*******************************/
-
-
-/*******************************
-             Headers
-*******************************/
-
-
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child {
-  margin-top: 0em;
-}
-
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child {
-  margin-bottom: 0em;
-}
-
-/*******************************
-             Text
-*******************************/
-
-p:first-child {
-  margin-top: 0em;
-}
-
-p:last-child {
-  margin-bottom: 0em;
-}
-
-/*******************************
-          Highlighting
-*******************************/
-
-/* Site */
-
-::-webkit-selection {
-  background-color: #CCE2FF;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::-moz-selection {
-  background-color: #CCE2FF;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-::selection {
-  background-color: #CCE2FF;
-  color: rgba(0, 0, 0, 0.87);
-}
-
 /* Form */
 
 textarea::-webkit-selection,

@@ -8,6 +8,9 @@ $gray: rgba(#fff, 0.7);
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    &.mobile {
+        overflow: hidden;
+    }
 }
 *,
 *::before,
@@ -298,6 +301,51 @@ input::-webkit-inner-spin-button {
         }
     }
 }
+/* Кнопка вверх uPTop */
+.ufive_uptop {
+    z-index: 100;
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: #f3be81;
+    border-radius: 3px;
+    bottom: 50px;
+    right: 50px;
+    margin-right: -30px;
+    outline: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+    cursor: pointer;
+}
+.ufive_uptop:hover {
+    background-color: #f7a445;
+}
+.ufive_upview {
+    transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+    margin-right: 0px;
+    opacity: 0.6;
+}
+.ufive_uptop::before,
+.ufive_uptop::after {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background-color: #393939;
+    top: 16px;
+}
+.ufive_uptop::before {
+    left: 18px;
+    transform: rotate(45deg);
+}
+.ufive_uptop::after {
+    right: 18px;
+    transform: rotate(-45deg);
+}
+
 .select {
     &:hover {
         box-shadow: 0 0 20px 10px rgba(#fff, 0.3) !important;
@@ -417,64 +465,54 @@ input::-webkit-inner-spin-button {
         background-image: url("../img/reserves/ethereum.png");
     }
 }
-.item__coin-alfabank {
+.item__coin-dash {
     &::after {
-        content: "500 000 ₽";
+        content: "1200 DASH";
     }
 }
-.coin-alfabank {
+.coin-dash {
     &::before {
-        background-image: url("../img/reserves/alfa-bank.png");
+        background-image: url("../img/reserves/darkcoin.png");
     }
 }
-.item__coin-mastercard {
+.item__coin-ltc {
     &::after {
-        content: "450 000 $";
+        content: "1200 LTC";
     }
 }
-.coin-mastercard {
+.coin-ltc {
     &::before {
-        background-image: url("../img/reserves/mastercard.png");
+        background-image: url("../img/reserves/litecoin.png");
     }
 }
-.item__coin-sberbank {
+.item__coin-usderc20 {
     &::after {
-        content: "1 000 000 ₽";
+        content: "1200 USDT erc20";
     }
 }
-.coin-sberbank {
+.coin-usderc20 {
     &::before {
-        background-image: url("../img/reserves/sberbank.png");
+        background-image: url("../img/reserves/usderc20.png");
     }
 }
-.item__coin-visa {
+.item__coin-zec {
     &::after {
-        content: "85 000 $";
+        content: "1200 ZEC";
     }
 }
-.coin-visa {
+.coin-zec {
     &::before {
-        background-image: url("../img/reserves/visa.png");
+        background-image: url("../img/reserves/zcash.png");
     }
 }
-.item__coin-tincoff {
+.item__coin-usdtrc20 {
     &::after {
-        content: "12 000 000 ₽";
+        content: "1200 USDT trc20";
     }
 }
-.coin-tincoff {
+.coin-usdtrc20 {
     &::before {
-        background-image: url("../img/reserves/tinkoff.png");
-    }
-}
-.item__coin-privatbank {
-    &::after {
-        content: "700 000 ₽";
-    }
-}
-.coin-privatbank {
-    &::before {
-        background-image: url("../img/reserves/privatbank.png");
+        background-image: url("../img/reserves/usdtrc20.png");
     }
 }
 

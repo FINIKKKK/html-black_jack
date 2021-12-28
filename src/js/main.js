@@ -29,6 +29,7 @@ $('.dropdown').dropdown();
 // Кнопка Hamburger
 $('.hamburger').click(function () {
   $('.header').toggleClass('mobile');
+  $('html').toggleClass('mobile');
 });
 
 
@@ -64,8 +65,8 @@ $.fn.setCursorPosition = function (pos) {
 };
 $('.input-creditCard').click(function () {
   $(this).setCursorPosition(0);
-}).mask("9999 9999 9999 9999");
-$('.input-creditCard').mask("9999 9999 9999 9999");
+}).mask("9999999999999999", { "placeholder": "" });
+$('.input-creditCard').mask("9999999999999999", { "placeholder": "" });
 
 
 
@@ -176,7 +177,7 @@ $('#trade__form-change').click(function () {
 
   let menuOne = $('#trade__form-select1').find('.menu.hidden').html();
   let menuTwo = $('#trade__form-select2').find('.menu.hidden').html();
-  
+
 
   $('#trade__form-select1').find('.text').html(valTwo);
   $('#trade__form-select2').find('.text').html(valOne);
@@ -192,7 +193,7 @@ $('#top__form-change').click(function () {
 
   let menuOne = $('#top__form-select1').find('.menu.hidden').html();
   let menuTwo = $('#top__form-select2').find('.menu.hidden').html();
-  
+
 
   $('#top__form-select1').find('.text').html(valTwo);
   $('#top__form-select2').find('.text').html(valOne);
@@ -200,3 +201,47 @@ $('#top__form-change').click(function () {
   $('#top__form-select1').find('.menu').html(menuTwo);
   $('#top__form-select2').find('.menu').html(menuOne);
 });
+
+
+
+//Кнопка поднятия на вверх
+document.addEventListener("DOMContentLoaded", function () {
+  let gototop = document.querySelector(".ufive_uptop");
+  let body = document.documentElement;
+
+  window.addEventListener("scroll", check);
+
+  function check() {
+    pageYOffset >= 500 && gototop.classList.add("ufive_upview");
+    pageYOffset < 500 && gototop.classList.remove("ufive_upview");
+  }
+
+  gototop.onclick = function () {
+    animate({
+      duration: 700,
+      timing: gogototopEaseOut,
+      draw: (progress) => (body.scrollTop = body.scrollTop * (1 - progress / 7))
+    });
+  };
+
+  let circ = (timeFraction) =>
+    1 -
+    Math.sin(Math.acos(timeFraction > 1 ? (timeFraction = 1) : timeFraction));
+
+  let makeEaseOut = (timing) => (timeFraction) => 1 - timing(1 - timeFraction);
+  let gogototopEaseOut = makeEaseOut(circ);
+});
+
+function animate(options) {
+  let start = performance.now();
+
+  requestAnimationFrame(function animate(time) {
+    let timeFraction = (time - start) / options.duration;
+    timeFraction > 1 && (timeFraction = 1);
+
+    let progress = options.timing(timeFraction);
+
+    options.draw(progress);
+    timeFraction < 1 && requestAnimationFrame(animate);
+  });
+}

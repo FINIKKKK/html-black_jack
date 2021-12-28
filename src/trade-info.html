@@ -97,7 +97,15 @@
                     <div class="trade-qr__content">
                         <div class="trade__title-box">
                             <p class="trade__subtitle">Сумма</p>
-                            <h3 class="trade__title">6000 USDTTRC20</h3>
+                            <div class="trade__copy">
+                                <h3 class="trade__title">6000 USDTTRC20</h3>
+                                <button class="trade__copy-btn">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="./img/icons/icons.svg#copy" />
+                                    </svg>
+                                    <span class="trade__copy-message">Скопировано!</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="trade__title-box">
                             <p class="trade__subtitle">Сумма</p>
@@ -241,7 +249,7 @@
     <!-- trade end -->
 
 
-
+    <button class="ufive_uptop"></button>
 
 
     @@include('./blocks/_footer.html')
@@ -249,7 +257,6 @@
 
     <!-- Scripts -->
     <script src="js/script.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script>
         var timeInSecs;
         var ticker;

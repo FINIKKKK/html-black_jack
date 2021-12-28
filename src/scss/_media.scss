@@ -1,17 +1,24 @@
-//Max-Width: 1279px ================================
-@media (max-width: 1279px) {
-}
-
 //Max-Width: 1200px ================================
 @media (max-width: 1200px) {
-}
-
-//Max-Width: 1150px ================================
-@media (max-width: 1150px) {
-}
-
-//Max-Width: 1100px ================================
-@media (max-width: 1100px) {
+    .ufive_uptop {
+        bottom: 25px;
+        right: 25px;
+        height: 35px;
+        width: 35px;
+    }
+    .ufive_uptop:hover {
+        background-color: #f3be81;
+    }
+    .ufive_uptop::after, .ufive_uptop::before {
+        height: 13px;
+        top: 12px;
+    }
+    .ufive_uptop::before {
+        left: 12px;
+    }
+    .ufive_uptop::after {
+        right: 12px;
+    }
 }
 
 //Max-Width: 1023px ================================
@@ -105,6 +112,44 @@
 
 //Max-Width: 900px ================================
 @media (max-width: 950px) {
+    .top {
+        .select.ui.dropdown {
+            padding: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .select.ui.dropdown .menu {
+            padding-top: 5px;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+            width: 25px;
+            height: 25px;
+        }
+        .select.ui.dropdown .menu > .item {
+            padding: 5px 10px !important;
+            font-size: 13px;
+            line-height: 17px;
+            padding-left: 43px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: 10px;
+        }
+        .select.ui.dropdown .menu > .dropdown-header {
+            margin: 3px 10px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    .top__form-block2 {
+        .select.ui.dropdown .menu > .item {
+            padding-left: 10px !important;
+            padding-right: 43px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: auto;
+            right: 10px;
+        }
+    }
     .top .top__form-input {
         width: 70%;
     }
@@ -124,21 +169,16 @@
 
 //Max-Width: 900px ================================
 @media (max-width: 900px) {
-    body {
-        padding-top: 80px;
-    }
     .header {
         z-index: 150;
-        position: fixed;
-        width: 100%;
         nav {
             background: none;
         }
     }
     .header .languages {
-        position: fixed;
-        top: 0px;
-        right: 0px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
     .header .hamburger {
         display: flex;
@@ -180,8 +220,8 @@
         margin-right: 0px;
     }
     .reserves .reserves__inner div {
-        flex: 0 0 auto;
-        padding: 0 20px;
+        flex: 0 0 23%;
+        padding: 0 0px;
         margin-bottom: 80px;
     }
     .benefits .benefits__inner div {
@@ -242,6 +282,28 @@
 //Планшет #########################################
 //Max-Width: 800px ================================
 @media (max-width: 800px) {
+    .top {
+        .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+            width: 20px;
+            height: 20px;
+        }
+        .select.ui.dropdown .menu > .item {
+            padding: 5px 10px !important;
+            font-size: 11px;
+            line-height: 15px;
+            padding-left: 36px !important;
+        }
+    }
+    .top__form-block2 {
+        .select.ui.dropdown .menu > .item {
+            padding-left: 5px !important;
+            padding-right: 30px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: auto;
+            right: 5px;
+        }
+    }
     .top {
         margin-bottom: 140px;
     }
@@ -355,42 +417,31 @@
 
 //Max-Width: 750px ================================
 @media (max-width: 750px) {
-    .top {
-        .select.ui.dropdown {
-            padding: 10px;
-            font-size: 16px;
-            line-height: 24px;
-        }
-        .select.ui.dropdown .menu {
-            padding-top: 5px;
-        }
-        .select.ui.dropdown .menu > .item .dropdown__item-img::before {
-            width: 25px;
-            height: 25px;
-        }
-        .select.ui.dropdown .menu > .item {
-            padding: 5px 10px !important;
-            font-size: 13px;
-            line-height: 17px;
-            padding-left: 43px !important;
-        }
-        .select.ui.dropdown .menu > .item .dropdown__item-img {
-            left: 10px;
-        }
-        .select.ui.dropdown .menu > .dropdown-header {
-            margin: 3px 10px;
-            font-size: 12px;
-            line-height: 14px;
-        }
+    .select.ui.dropdown {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 24px;
     }
-    .top__form-block2 {
-        .select.ui.dropdown .menu > .item {
-            padding-right: 43px !important;
-        }
-        .select.ui.dropdown .menu > .item .dropdown__item-img {
-            left: auto;
-            right: 10px;
-        }
+    .select.ui.dropdown .menu {
+        padding-top: 5px;
+    }
+    .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+        width: 25px;
+        height: 25px;
+    }
+    .select.ui.dropdown .menu > .item {
+        padding: 5px 10px !important;
+        font-size: 13px;
+        line-height: 17px;
+        padding-left: 43px !important;
+    }
+    .select.ui.dropdown .menu > .item .dropdown__item-img {
+        left: 10px;
+    }
+    .select.ui.dropdown .menu > .dropdown-header {
+        margin: 3px 10px;
+        font-size: 12px;
+        line-height: 14px;
     }
     .trade-form .input-block {
         margin-bottom: 10px;
@@ -442,6 +493,11 @@
 
 //Max-Width: 700px ================================
 @media (max-width: 700px) {
+    .reserves .reserves__inner div {
+        flex: 0 0 25%;
+        padding: 0 0px;
+        margin-bottom: 80px;
+    }
     .top .select.ui.dropdown {
         font-size: 14px;
         line-height: 22px;
@@ -450,18 +506,18 @@
         width: 18px;
         height: 18px;
     }
-    .top__form-block2 .select.ui.dropdown>.text {
+    .top__form-block2 .select.ui.dropdown > .text {
         padding-right: 22px;
     }
     .top .select .dropdown__item-img {
         margin-right: 5px;
     }
     .top {
-        .select.ui.dropdown>.dropdown.icon {
+        .select.ui.dropdown > .dropdown.icon {
             right: 8px;
         }
     }
-    .top__form-block2 .select.ui.dropdown>.dropdown.icon {
+    .top__form-block2 .select.ui.dropdown > .dropdown.icon {
         right: auto;
         left: 8px;
     }
@@ -567,31 +623,9 @@
 //Телефон #########################################
 //Max-Width: 641px ================================
 @media (max-width: 641px) {
-    .select.ui.dropdown {
-        padding: 10px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    .select.ui.dropdown .menu {
-        padding-top: 5px;
-    }
-    .select.ui.dropdown .menu > .item .dropdown__item-img::before {
-        width: 25px;
-        height: 25px;
-    }
-    .select.ui.dropdown .menu > .item {
-        padding: 5px 10px !important;
-        font-size: 13px;
-        line-height: 17px;
-        padding-left: 43px !important;
-    }
-    .select.ui.dropdown .menu > .item .dropdown__item-img {
-        left: 10px;
-    }
-    .select.ui.dropdown .menu > .dropdown-header {
-        margin: 3px 10px;
-        font-size: 12px;
-        line-height: 14px;
+    .ufive_uptop {
+        bottom: 15px;
+        right: 15px;
     }
     .trade-form .trade-form__content {
         padding: 25px 20px;
@@ -640,11 +674,10 @@
 //Max-Width: 600px ================================
 @media (max-width: 600px) {
     .top__form-block2 {
-        margin-top: 15px;
         text-align: left;
     }
     .top .select-change__btn {
-        display: none;
+        margin: 5px auto;
     }
     .top .top__form-block {
         width: 100%;
@@ -707,6 +740,16 @@
 
 //Max-Width: 550px ================================
 @media (max-width: 550px) {
+    .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+        width: 20px;
+        height: 20px;
+    }
+    .select.ui.dropdown .menu > .item {
+        padding: 5px 10px !important;
+        font-size: 11px;
+        line-height: 15px;
+        padding-left: 36px !important;
+    }
     .trade-qr {
         flex-direction: column;
     }
@@ -796,6 +839,12 @@
 
 //Max-Width: 500px ================================
 @media (max-width: 500px) {
+    .trade-form .trade__form-selects {
+        display: block;
+    }
+    .reserves .reserves__inner div {
+        flex: 0 0 30%;
+    }
     .trade__form-select:nth-child(1) {
         margin-right: 10px !important;
     }
@@ -818,7 +867,7 @@
         align-items: center;
     }
     .trade-form .select-change__btn {
-        display: none;
+        margin: 10px auto;
     }
     .trade-form .footerline {
         margin-top: 5px;
@@ -1047,6 +1096,28 @@
 
 //Max-Width: 359px ================================
 @media (max-width: 359px) {
+    .top {
+        .select.ui.dropdown .menu > .item .dropdown__item-img::before {
+            width: 20px;
+            height: 20px;
+        }
+        .select.ui.dropdown .menu > .item {
+            padding: 5px 10px !important;
+            font-size: 9px;
+            line-height: 14px;
+            padding-left: 36px !important;
+        }
+    }
+    .top__form-block2 {
+        .select.ui.dropdown .menu > .item {
+            padding-left: 5px !important;
+            padding-right: 30px !important;
+        }
+        .select.ui.dropdown .menu > .item .dropdown__item-img {
+            left: auto;
+            right: 5px;
+        }
+    }
     .trade__form-select:nth-child(1) {
         margin-right: 5px !important;
     }
